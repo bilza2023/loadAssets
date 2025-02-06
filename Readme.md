@@ -4,6 +4,13 @@
 ## Overview
 Taleem Assets is a utility library for loading background images, sprites, sounds, and general images, along with a collection of icons for use in web applications.
 
+This library is part of libraries created for https://taleem.help.
+Ina addition to having integral assets the functions can be used to down load and manage assets.
+
+There are background images  and sprites converted into Base64 format so that moving these images and asset bundle becomes easy.
+
+![Demo Page](./demo.png)
+
 ## Installation
 ```sh
 npm install taleem-assets

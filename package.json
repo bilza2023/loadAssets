@@ -1,36 +1,17 @@
 {
-
+"name": "taleem-assets",
+	"version": "0.9.9",
 
   "scripts": {
-
-
     "dev": "vite",
-
-
     "build": "vite build",
-
-
     "preview": "vite preview"
-
-
   },
-
-
   "dependencies": {
-
-
     "howler": "^2.2.4"
-
-
   },
-
-
   "devDependencies": {
-
-
     "vite": "^6.1.0"
-
-
   }
 
 
