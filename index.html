@@ -4,42 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taleem Assets Test</title>
-    <script type="module">
-        import { loadBackgroundImages, loadSprites, loadSound, loadImages, Icons } from './index.js';
-        
-        async function testLibrary() {
-            try {
-                // Test Background Images
-                const bgImages = await loadBackgroundImages();
-                console.log('Background Images:', bgImages);
-
-                // Test Sprites
-                const sprites = await loadSprites();
-                console.log('Sprites:', sprites);
-
-                // Test Sound
-                const sound = await loadSound("https://file-examples.com/wp-content/uploads/2017/11/file_example_OPUS_1MG.opus");
-                console.log('Sound:', sound);
-                if (sound) sound.play();
-
-                // Test Images
-                const images = await loadImages(['test1.png', 'test2.jpg']);
-                console.log('Loaded Images:', images);
-
-                // Test Icons
-                console.log('Icons:', Icons);
-                document.getElementById('icon-display').textContent = Icons.ROCKET;
-            } catch (error) {
-                console.error('Error testing Taleem Assets:', error);
-            }
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
-        
-        window.onload = testLibrary;
-    </script>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid white;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+<script type="module" src="./script.js"></script>
 </head>
 <body>
     <h1>Taleem Assets Library Test</h1>
     <p>Check the console for test results.</p>
+    <button onclick="playSound()">Play Sound</button>
+    <button onclick="stopSound()">Stop Sound</button>
     <p>Sample Icon: <span id="icon-display"></span></p>
+    <div class="container" id="layer-container">
+    </div>
 </body>
 </html>

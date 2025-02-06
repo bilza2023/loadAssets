@@ -1,4 +1,5 @@
-import { Howl } from 'howler.js';
+
+import { Howl } from 'howler';
 
 export default async function loadNarration(soundUrl) {
     return new Promise((resolve) => {
